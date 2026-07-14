@@ -1,0 +1,14 @@
+{
+    "version": 1,
+
+    "parcel": {
+        "name": "demo",
+        "corners": []
+    },
+
+    "imagery": {
+        "date": "",
+        "provider": "",
+        "resolution": ""
+    }
+}
