@@ -4,7 +4,10 @@ async function main() {
 
         const publishedParcel = await loadPublishedParcel();
 
-        APP_CONFIG = publishedParcel.viewer;
+        Object.assign(
+            APP_CONFIG.cesium,
+            publishedParcel.viewer.cesium
+        );
 
         initializeEarthMap();
 
