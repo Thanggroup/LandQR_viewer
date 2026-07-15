@@ -1,19 +1,30 @@
 async function main() {
+
     try {
 
-        const viewerConfig = await loadViewerConfig();
+        const publishedParcel = await loadPublishedParcel();
 
-        initializeEarthMap(viewerConfig);
+        APP_CONFIG = publishedParcel.viewer;
 
-        const publishedParcel =
-            await loadPublishedParcel();
+        initializeEarthMap();
 
         console.log(publishedParcel);
 
+        displayEarthParcel(
+            publishedParcel.parcel.surveyCorners
+        );
+
+        updateImageryPanel(
+            publishedParcel.imagery
+        );
+
     }
     catch (error) {
+
         console.error(error);
+
     }
+
 }
 
 main();
