@@ -1,4 +1,4 @@
-const API_URL = "https://landqr-api.onrender.com";
+const API_URL = APP_CONFIG.api.url;
 
 async function loadPublishedParcel() {
 
